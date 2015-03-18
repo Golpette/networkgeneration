@@ -1,0 +1,131 @@
+# lines starting with # are comments
+# lines starting with * are reaction classes
+
+*1.1.1.oxidation
+R1-CH(OH)-R2 + NAD_ox > R1-CO-R2 + NAD_red
+R1=CH(OH) + NAD_ox > R1=CO + NAD_red
+
+# this one needs -R2- implemented
+#R1-CH(OH)-R2-COOH + NAD_ox + H2O > R1-CO-R2H + CO2(aq) + NAD_red
+# quick fix, do it better!
+R1-CH(OH)-CH2-COOH + NAD_ox + H2O > R1-CO-CH3 + CO2(aq) + NAD_red
+R1-CH(OH)-CH(OH)-COOH + NAD_ox + H2O > R1-CO-CH2(OH) + CO2(aq) + NAD_red
+R1-CH(OH)-CH(NH2)-COOH + NAD_ox + H2O > R1-CO-CH2(NH2) + CO2(aq) + NAD_red
+R1-CH(OH)-CO-COOH + NAD_ox + H2O > R1-CO-CHO + CO2(aq) + NAD_red
+R1-CH(OH)-CHp-COOH + NAD_ox + H2O > R1-CO-CH2p + CO2(aq) + NAD_red
+
+
+R1-CH(OH)-COOH + NAD_ox + H2O > R1-CHO + CO2(aq) + NAD_red
+
+*1.2.1.oxidation
+R1-CHO + NAD_ox + H2O > R1-COOH + NAD_red
+R1-CHO + NAD_ox + Pi > R1-COp + NAD_red
+
+*1.3.1.oxidation
+R1-CH2-CH2-R2 + NAD_ox > R1-CH=CH-R2 + NAD_red
+R1-CH2-C(H)(H)xx + NAD_ox > R1-CH=C(H)xx + NAD_red
+
+*2.7.1.phosph_transfer
+R1-CH(OH)-R2 + ATP > R1-CHp-R2 + ADP
+R1=C(OH)-R2 + ATP > R1=Cp-R2 + ADP
+R1=Cp-R2 + ADP > R1H-CO-R2 + ATP
+
+*2.7.2.phosph_transfer
+R1-COOH + ATP > R1-COp + ADP
+
+*2.7.9.phosph_transfer
+R1=Cp-R2 + AMP + Pi > R1H-CO-R2 + ATP + H2O
+R1=Cp-R2 + AMP + PPi > R1H-CO-R2 + ATP + Pi
+#AMP+PP   commented out on Steve's suggestion
+#R1-CH2(OH) + ATP + Pi > R1-CH2p + AMP + PPi
+#R1-COOH + ATP + Pi > R1-COp + AMP + PPi
+#R1-CH(OH)-R2 + ATP + Pi > R1-CHp-R2 + AMP + PPi
+#R1=C(OH)-R2 + ATP + Pi > R1=Cp-R2 + AMP + PPi
+#AMP  commented out on Steve's suggestion
+#R1-CH2(OH) + ATP + H2O > R1-CH2p + AMP + Pi
+#R1-COOH + ATP + H2O > R1-COp + AMP + Pi
+#R1-CH(OH)-R2 + ATP + H2O > R1-CHp-R2 + AMP + Pi
+#R1=C(OH)-R2 + ATP + H2O > R1=Cp-R2 + AMP + Pi
+
+
+*3.1.3.Phydrolysis
+R1=CHp + H2O > R1=CH(OH) + Pi
+R1-CHp-R2 + H2O > R1-CH(OH)-R2 + Pi
+R1=Cp-R2 + H2O > R1=C(OH)-R2 + Pi
+
+*3.6.1.Phydrolysis_Anhydr
+R1-COp + H2O > R1-COOH + Pi
+
+
+*4.1.1.decarboxylation
+R1-COOH + H2O > R1H + CO2(aq)
+
+# change all of these to a more general form R-CO-R'-COOH + Pi -> RH=Cp-R + CO2
+R1-CO-CH2-COOH + Pi > R1-Cp=CH2 + CO2(aq)
+R1-CO-CHp-COOH + Pi > R1-Cp=CHp + CO2(aq)
+R1-CO-CH(OH)-COOH + Pi > R1-Cp=CH(OH) + CO2(aq)
+R1-CO-CH(NH2)-COOH + Pi > R1-Cp=CH(NH2) + CO2(aq)
+
+R1-CO-CH2-COOH + ATP + H2O > R1-Cp=CH2 + CO2(aq) + ADP
+R1-CO-CHp-COOH + ATP + H2O > R1-Cp=CHp + CO2(aq) + ADP
+R1-CO-CH(OH)-COOH + ATP + H2O > R1-Cp=CH(OH) + CO2(aq) + ADP
+R1-CO-CH(NH2)-COOH + ATP + H2O > R1-Cp=CH(NH2) + CO2(aq) + ADP
+
+
+*4.2.1.dehydration
+R1-C(H)xx-C(OH)yy-R2 > R1-Cxx=Cyy-R2 + H2O
+R1-C(H)xx-C(OH)yy > R1-Cxx=Cyy + H2O
+R1-C(OH)xx-C(H)yy > R1-Cxx=Cyy + H2O
+C(OH)xx-C(H)yy > Cxx=Cyy + H2O
+R1-CH(OH)-C(OH)xx-R2 > R1-CO-C(H)xx-R2 + H2O
+R1-CH(OH)-C(OH)xx > R1-CO-C(H)xx + H2O
+R1-CH(OH)-COOH > R1-CO-CHO + H2O
+
+*5.3.1.isomerization
+R1-CO-CH2(OH) > R1-CH(OH)-CHO
+
+*5.3.2.tautomerism
+R1=C(OH)-R2 > R1H-CO-R2
+
+*5.4.2.isomerization
+R1-CH(OH)-CH2p > R1-CHp-CH2(OH)
+R1=C(OH)-CH2p > R1=Cp-CH2(OH)
+R1-CHp-COOH > R1-CH(OH)-COp
+R1=Cp-COOH > R1=C(OH)-COp
+
+*6.4.1.P_carboxylation
+#R1H + CO2(aq) + ATP > R1-COOH + ADP + Pi
+#this is explicit version of R1H-CO-COOH + CO2(aq) + ATP > COOH-R1-CO-COOH + ADP + Pi
+CH3-CO-COOH + CO2(aq) + ATP > COOH-CH2-CO-COOH + ADP + Pi
+CH2(OH)-CO-COOH + CO2(aq) + ATP > COOH-CH(OH)-CO-COOH + ADP + Pi
+CHO-CO-COOH + CO2(aq) + ATP > COOH-CO-CO-COOH + ADP + Pi
+CH2p-CO-COOH + CO2(aq) + ATP > COOH-CHp-CO-COOH + ADP + Pi
+CH2(NH2)-CO-COOH + CO2(aq) + ATP > COOH-CH(NH2)-CO-COOH + ADP + Pi
+
+# here come new reactions involving nitrogen
+# one thing that is unclear to me is whether -NH2 should include associated H2O (-NH3^+ + OH-) or not?
+# at present it does not hence the necessity for a 2nd water
+
+
+*1.4.1.redox+deamination
+R1-CH(NH2)-COOH + NAD_ox + H2O > R1-CO-COOH + NAD_red + NH3(aq)
+
+*2.6.1.transaminase
+# NH2donor = glutamate+all other donors, NH2acceptor = 2-Oxoglutarate + all other acceptors of -NH2
+R1-CO-R2 + NH2donor > R1-CH(NH2)-R2 + NH2acceptor
+R1-CHO + NH2donor > R1-CH2(NH2) + NH2acceptor
+
+*3.5.1.deamination
+R1-CO(NH2) + H2O > R1-COOH + NH3(aq)
+
+*4.3.1.ammonia-lysis
+R1H-CH(NH2)-COOH > R1=CH-COOH + NH3(aq)
+R1-CH(OH)-CH(NH2)-COOH > R1-CH2-CO-COOH + NH3(aq)
+
+*5.4.3.amino-iso
+R1-CH2-CH(NH2)-COOH > R1-CH(NH2)-CH2-COOH
+R1-CH2-CH2(NH2) > R1-CH(NH2)-CH3
+R1-CO-CH2(NH2) > R1-CH(NH2)-CHO
+
+*6.3.1.Acid-Ammonia-Ligation
+R1-COOH + ATP + NH3(aq) > R1-CO(NH2) + ADP + Pi
