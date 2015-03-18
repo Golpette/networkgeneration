@@ -1,8 +1,13 @@
-This repository contains files written by Steven Court, Bartek Waclaw University of Edinburgh
+This repository contains files written by Steven Court and Bartlomiej Waclaw, University of Edinburgh.
 
-- generate biochemically feasible reactions from EC numbers
+- 2 separate programs to generate biochemically feasible reactions from EC numbers:  networkgeneration_steve and networkgeneration_bartek
+- Some evolutionary simulations
 
-- calculate Delta-G values by the group contribution method
 
-- some evolutionary simulations
+"_bartek" program automatically calculates Delta-G values via a group contribution method, trained on experimental Delta-G values from Alberty's database.  
+"_steven" currently does not implement any thermodynamics.  
+See separate readme files in each directory for more details, and the "Notes on ... reactions.odt" files for some notes and references on each of the reaction classes included in the networks and how they are implemented.
+
+
+
 
