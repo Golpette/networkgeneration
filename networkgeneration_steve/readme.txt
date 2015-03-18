@@ -1,4 +1,5 @@
-Java program to generate list of linear molecules composed of C, H, O and P up to specified length as well as all possible reactions between them as defined by action of relevant EC classes.
+Java program to generate list of linear molecules composed of C, H, O and P up to specified length as well as all possible reactions between them as defined by action of relevant EC classes.  Currently this program does not incorporate any thermodynamics.
+
 
 Two main programs to run:  ---------------------------------------------
 
@@ -20,3 +21,13 @@ Some other notes:
 - Compound.java defines a Compound object
 
 - Rxn.java defines a Rxn (reaction) object which was used for removing duplicate reaction entries
+
+
+
+============  How to run:  =========================
+
+If you've not used java before, all .java files must be compiled to byte-code before they can be run. To do this, use "javac filename.java" and a corresponding "filename.class" file will be generated. To compile all classes at once you can type "javac *.java".  After every modification to your code you must recompile the program to form updated .class files.
+
+Once you have compiled the program, it is run by typing "java filename".  Note that the name of the input and output files are currently hard-coded in CompoundGenerator.java and ReactionGenerator.java, so you might need to change this (and then recompile!) before running.
+
+====================================================
