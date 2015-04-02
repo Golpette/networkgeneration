@@ -1,0 +1,66 @@
+forward 1.2.1.oxidation 182 218 0 1 1.71339  CHO-CH(OH)-CH2p + NAD_ox + Pi ---> CH2p-CH(OH)-COp + NAD_red
+backward 2.7.2.phosph_transfer 218 142 1 0 -8.19008  ADP + CH2p-CH(OH)-COp ---> ATP + COOH-CH(OH)-CH2p
+forward 5.4.2.isomerization 142 109 0 0 5.9209  COOH-CH(OH)-CH2p ---> CH2(OH)-CHp-COOH
+forward 4.2.1.dehydration 109 172 0 0 -3.51984  CH2(OH)-CHp-COOH ---> CH2=Cp-COOH + H2O
+forward 2.7.1.phosph_transfer 172 54 1 0 -28.9388  CH2=Cp-COOH + ADP ---> CH3-CO-COOH + ATP
+Path_0 ends here
+forward 1.2.1.oxidation 182 218 0 1 1.71339  CHO-CH(OH)-CH2p + NAD_ox + Pi ---> CH2p-CH(OH)-COp + NAD_red
+backward 2.7.2.phosph_transfer 218 142 1 0 -8.19008  ADP + CH2p-CH(OH)-COp ---> ATP + COOH-CH(OH)-CH2p
+forward 5.4.2.isomerization 142 109 0 0 5.9209  COOH-CH(OH)-CH2p ---> CH2(OH)-CHp-COOH
+forward 4.2.1.dehydration 109 172 0 0 -3.51984  CH2(OH)-CHp-COOH ---> CH2=Cp-COOH + H2O
+backward 4.1.1.decarboxylation 172 914 0 0 -37.7635  CO2(aq) + CH2=Cp-COOH ---> Pi + COOH-CH2-CO-COOH
+backward 6.4.1.P_carboxylation 914 54 1 0 8.82466  Pi + ADP + COOH-CH2-CO-COOH ---> ATP + CO2(aq) + CH3-CO-COOH
+Path_1 ends here
+forward 5.4.2.isomerization 182 110 0 0 10.465  CHO-CH(OH)-CH2p ---> CHO-CHp-CH2(OH)
+forward 4.2.1.dehydration 110 209 0 0 -3.528  CHO-CHp-CH2(OH) ---> CH2=Cp-CHO + H2O
+backward 4.1.1.decarboxylation 209 915 0 0 -48.269  CO2(aq) + CH2=Cp-CHO ---> Pi + CHO-CO-CH2-COOH
+forward 1.2.1.oxidation 915 917 0 1 -2.57  CHO-CO-CH2-COOH + NAD_ox + Pi ---> COOH-CH2-CO-COp + NAD_red
+backward 2.7.2.phosph_transfer 917 914 1 0 2.06291  ADP + COOH-CH2-CO-COp ---> ATP + COOH-CH2-CO-COOH
+backward 6.4.1.P_carboxylation 914 54 1 0 8.82466  Pi + ADP + COOH-CH2-CO-COOH ---> ATP + CO2(aq) + CH3-CO-COOH
+Path_2 ends here
+forward 2.7.1.phosph_transfer 182 192 -1 0 -15.565  CHO-CH(OH)-CH2p + ATP ---> CHO-CHp-CH2p + ADP
+forward 1.2.1.oxidation 192 226 0 1 -2.57  CHO-CHp-CH2p + NAD_ox + Pi ---> CH2p-CHp-COp + NAD_red
+backward 2.7.2.phosph_transfer 226 154 1 0 -8.43  ADP + CH2p-CHp-COp ---> ATP + COOH-CHp-CH2p
+backward 2.7.1.phosph_transfer 154 109 1 0 26.0092  ADP + COOH-CHp-CH2p ---> ATP + CH2(OH)-CHp-COOH
+forward 4.2.1.dehydration 109 172 0 0 -3.51984  CH2(OH)-CHp-COOH ---> CH2=Cp-COOH + H2O
+forward 2.7.1.phosph_transfer 172 54 1 0 -28.9388  CH2=Cp-COOH + ADP ---> CH3-CO-COOH + ATP
+Path_3 ends here
+forward 1.2.1.oxidation 182 218 0 1 1.71339  CHO-CH(OH)-CH2p + NAD_ox + Pi ---> CH2p-CH(OH)-COp + NAD_red
+backward 2.7.2.phosph_transfer 218 142 1 0 -8.19008  ADP + CH2p-CH(OH)-COp ---> ATP + COOH-CH(OH)-CH2p
+forward 5.4.2.isomerization 142 109 0 0 5.9209  COOH-CH(OH)-CH2p ---> CH2(OH)-CHp-COOH
+forward 4.2.1.dehydration 109 172 0 0 -3.51984  CH2(OH)-CHp-COOH ---> CH2=Cp-COOH + H2O
+backward 2.7.1.phosph_transfer 172 168 1 0 0.0611682  ADP + CH2=Cp-COOH ---> ATP + CH2=C(OH)-COOH
+forward 5.3.2.tautomerism 168 54 0 0 -29.0  CH2=C(OH)-COOH ---> CH3-CO-COOH
+Path_4 ends here
+forward 1.2.1.oxidation 182 218 0 1 1.71339  CHO-CH(OH)-CH2p + NAD_ox + Pi ---> CH2p-CH(OH)-COp + NAD_red
+backward 2.7.2.phosph_transfer 218 142 1 0 -8.19008  ADP + CH2p-CH(OH)-COp ---> ATP + COOH-CH(OH)-CH2p
+forward 5.4.2.isomerization 142 109 0 0 5.9209  COOH-CH(OH)-CH2p ---> CH2(OH)-CHp-COOH
+forward 4.2.1.dehydration 109 172 0 0 -3.51984  CH2(OH)-CHp-COOH ---> CH2=Cp-COOH + H2O
+forward 2.7.9.phosph_transfer 172 54 1 0 -17.7208  CH2=Cp-COOH + AMP + PPi ---> CH3-CO-COOH + ATP + Pi
+Path_5 ends here
+forward 1.2.1.oxidation 182 218 0 1 1.71339  CHO-CH(OH)-CH2p + NAD_ox + Pi ---> CH2p-CH(OH)-COp + NAD_red
+backward 5.4.2.isomerization 218 154 0 0 -28.2784  CH2p-CH(OH)-COp ---> COOH-CHp-CH2p
+backward 2.7.1.phosph_transfer 154 109 1 0 26.0092  ADP + COOH-CHp-CH2p ---> ATP + CH2(OH)-CHp-COOH
+forward 4.2.1.dehydration 109 172 0 0 -3.51984  CH2(OH)-CHp-COOH ---> CH2=Cp-COOH + H2O
+forward 2.7.1.phosph_transfer 172 54 1 0 -28.9388  CH2=Cp-COOH + ADP ---> CH3-CO-COOH + ATP
+Path_6 ends here
+forward 1.2.1.oxidation 182 218 0 1 1.71339  CHO-CH(OH)-CH2p + NAD_ox + Pi ---> CH2p-CH(OH)-COp + NAD_red
+forward 5.4.2.isomerization 218 112 0 0 6.18158  CH2p-CH(OH)-COp ---> CH2(OH)-CHp-COp
+forward 4.2.1.dehydration 112 267 0 0 -3.528  CH2(OH)-CHp-COp ---> CH2=Cp-COp + H2O
+forward 2.7.1.phosph_transfer 267 57 1 0 -36.3  CH2=Cp-COp + ADP ---> CH3-CO-COp + ATP
+backward 2.7.2.phosph_transfer 57 54 1 0 -1.08144  ADP + CH3-CO-COp ---> ATP + CH3-CO-COOH
+Path_7 ends here
+forward 1.2.1.oxidation 182 218 0 1 1.71339  CHO-CH(OH)-CH2p + NAD_ox + Pi ---> CH2p-CH(OH)-COp + NAD_red
+backward 5.4.2.isomerization 218 154 0 0 -28.2784  CH2p-CH(OH)-COp ---> COOH-CHp-CH2p
+backward 2.7.1.phosph_transfer 154 109 1 0 26.0092  ADP + COOH-CHp-CH2p ---> ATP + CH2(OH)-CHp-COOH
+forward 4.2.1.dehydration 109 172 0 0 -3.51984  CH2(OH)-CHp-COOH ---> CH2=Cp-COOH + H2O
+backward 4.1.1.decarboxylation 172 914 0 0 -37.7635  CO2(aq) + CH2=Cp-COOH ---> Pi + COOH-CH2-CO-COOH
+backward 6.4.1.P_carboxylation 914 54 1 0 8.82466  Pi + ADP + COOH-CH2-CO-COOH ---> ATP + CO2(aq) + CH3-CO-COOH
+Path_8 ends here
+forward 1.2.1.oxidation 182 218 0 1 1.71339  CHO-CH(OH)-CH2p + NAD_ox + Pi ---> CH2p-CH(OH)-COp + NAD_red
+forward 2.7.1.phosph_transfer 218 226 -1 0 -19.8484  CH2p-CH(OH)-COp + ATP ---> CH2p-CHp-COp + ADP
+backward 2.7.2.phosph_transfer 226 154 1 0 -8.43  ADP + CH2p-CHp-COp ---> ATP + COOH-CHp-CH2p
+backward 2.7.1.phosph_transfer 154 109 1 0 26.0092  ADP + COOH-CHp-CH2p ---> ATP + CH2(OH)-CHp-COOH
+forward 4.2.1.dehydration 109 172 0 0 -3.51984  CH2(OH)-CHp-COOH ---> CH2=Cp-COOH + H2O
+forward 2.7.1.phosph_transfer 172 54 1 0 -28.9388  CH2=Cp-COOH + ADP ---> CH3-CO-COOH + ATP
+Path_9 ends here

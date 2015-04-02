@@ -8,8 +8,7 @@ import java.text.*;
   Reads in from terminal:    compound_file, reaction_file, desired path length
 
   FLUX METHOD:  currently does not compute flux, but could add back in the calculation from Heinrich1997 Eq(40), 
-   to allow us to allows us to determine if a pathway is at least thermodynamically feasible for a specific 
-   set of conditions.
+  to allow us to determine if a pathway is at least thermodynamically feasible for a specific set of conditions.
 **/
 
 
